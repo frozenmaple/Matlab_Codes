@@ -1,0 +1,11 @@
+clear;clc;
+ts=0.001;
+fs=1/ts;
+df=0.5;
+N=fs/df;
+
+t=[-2:ts:-2+ts*(N-1)];
+
+x=sinc(100*t).*cos(2*pi*200*t);
+[X,x_new,df] = fftseq(x,ts,df);
+X1=X/fs;

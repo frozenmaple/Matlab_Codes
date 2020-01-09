@@ -1,0 +1,10 @@
+function codeout = dltpcm(x,delta)
+%简单增量调制函数
+%输入delta
+xlen=length(x);
+Dk=0;
+for k=1:xlen
+    err=x(k)-Dk;
+    if (err>=0)
+        qout=delta;
+        code
